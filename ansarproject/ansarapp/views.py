@@ -16,5 +16,5 @@ def mysurname(request):
                         <a href='http://127.0.0.1:8000/'> Назад </a>""")
 
 def mynumber(request):
-    return HttpResponse("""<h1> 87774713008 </h1> </br>
+    return HttpResponse("""<h1> 87774713028 </h1> </br>
                         <a href='http://127.0.0.1:8000/'> Назад </a>""")
