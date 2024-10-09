@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ansarapp.views import my_first_view, myname, mysurname, mynumber
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', my_first_view),
+    path('myname', myname),
+    path('mysurname', mysurname),
+    path('mynumber', mynumber)
 ]
