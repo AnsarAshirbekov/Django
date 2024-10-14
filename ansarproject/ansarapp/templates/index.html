@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %} 
+        <input type="text" name="name" placeholder="Ваше имя"> </br></br>
+        <textarea name="message" placeholder="Ваше сообщение"></textarea> </br></br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <form method="PUT">
+        {% csrf_token %} 
+        <textarea name="message" placeholder="Ваше новое сообщение"></textarea> </br></br>
+        <button type="change">Изменить</button>
+    </form>
+
+    <form method="DELETE">
+        {% csrf_token %} 
+        <input type="text" name="name" placeholder="удалить имя"> </br></br>
+        <button type="delete">Удалить</button>
+    </form>
+</body>
+</html>
