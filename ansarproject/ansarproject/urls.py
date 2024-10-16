@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 # from ansarapp.views import my_first_view, myname, mysurname, mynumber
 # from ansarapp.views import my_view
 # from ansarapp.views import contact_view
@@ -33,5 +33,5 @@ urlpatterns = [
     # path('', contact_view)
     # re_path(r"^article/(?P<id>\d{4})/$", article_detail),
     # path('article/<int:id>/', article_detail, name= 'list_post')
-    path('', myapp_view)
+    path('', include('ansarapp.urls'))
 ]

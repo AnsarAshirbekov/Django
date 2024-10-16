@@ -118,8 +118,27 @@ from django.shortcuts import render
 def myapp_view(request):
     
     data = {
-        'name':'Ansar',
-        'age': 28
+        'name':'Ansar Ashirbekov',
+        'age': 28,
+        'knowledge': ['Математика', 'Химия', 'C++'],
+        'aboutme': """<h1>Привет</h1><strong>мир!</strong>
+        <script>alert('Вас взломали')</script>"""
     }
 
-    return render(request, 'index.html', data)
+    # context = {
+    #     'students' : [
+    #         {'name' :'Ansar',
+    #         'lastname' :'Ashirbekov'},
+    #         {'name' :'Danara',
+    #         'lastname' :'Magomedova'},
+    #         {'name' :'Nurlan',
+    #         'lastname' :'Azhigalin'},
+    #         {'name' :'Aben',
+    #         'lastname' :'Baktygulov'},
+    #         {'name' :'Mansur',
+    #         'lastname' :'Karim'}
+    #     ]
+    # }
+
+    return render(request, 'ansarapp/index.html', data)
+

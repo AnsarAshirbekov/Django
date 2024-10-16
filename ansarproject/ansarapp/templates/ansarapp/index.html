@@ -1,0 +1,48 @@
+<!-- Привет мир ! </br>
+
+Мое имя: {{ name}} </br>
+
+Мой возраст: {{ age }} </br>
+
+{% if age > 50 %}
+ты большой
+{% else %}
+ты маленький
+{% endif %}
+</br>
+
+Я знаю:
+
+{% for know in knowledge %}
+{{know}},
+{%endfor%}
+Python -->
+
+{% comment %} {% for student in students %}
+{{ student.name }} {{ student.lastname }} </br>
+{% endfor %} {% endcomment %}
+
+upper - {{ name|upper }} </br>
+lower - {{ name|lower }} </br>
+title - {{ name|title }} </br>
+length - {{ name|length }} </br>
+truncatechars:8 - {{ name|truncatechars:8 }}</br>
+slice:"2:8" - {{ name|slice:"2:8"}}  </br>
+
+add:10 -{{ age|add:10 }} </br>
+
+{% if age|divisibleby:3 %}
+Делится на 4
+{% else %}
+Не делится на 4
+{% endif %} </br>
+
+{{ 3.14159|floatformat:4 }}
+
+{{ knowledge|slice:":1" }} </br>
+{{ knowledge|first }} </br>
+{{ knowledge|last }} </br>
+{{ knowledge|join:", " }} </br>
+{{ knowledge|random }} </br>
+
+{{ aboutme|safe }}
