@@ -19,7 +19,8 @@ from django.urls import path, re_path
 # from ansarapp.views import my_first_view, myname, mysurname, mynumber
 # from ansarapp.views import my_view
 # from ansarapp.views import contact_view
-from ansarapp.views import article_detail
+# from ansarapp.views import article_detail
+from ansarapp.views import myapp_view
 
 
 urlpatterns = [
@@ -31,5 +32,6 @@ urlpatterns = [
     # path('', my_view)
     # path('', contact_view)
     # re_path(r"^article/(?P<id>\d{4})/$", article_detail),
-    path('article/<int:id>/', article_detail, name= 'list_post')
+    # path('article/<int:id>/', article_detail, name= 'list_post')
+    path('', myapp_view)
 ]

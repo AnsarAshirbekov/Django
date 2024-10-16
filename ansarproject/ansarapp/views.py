@@ -112,5 +112,14 @@ from django.shortcuts import render
 #         name = request.DELETE.get('name')
 #         return HttpResponse(f'имя {name} удалено')
 
-def article_detail(request, id):
-    return HttpResponse(f'Статья с ID: {id}')
+# def article_detail(request, id):
+#     return HttpResponse(f'Статья с ID: {id}')
+
+def myapp_view(request):
+    
+    data = {
+        'name':'Ansar',
+        'age': 28
+    }
+
+    return render(request, 'index.html', data)
